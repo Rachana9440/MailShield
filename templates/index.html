@@ -1,0 +1,80 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>MailShield | Email Security Analyzer</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="logo">MailShield</div>
+        <div class="nav-text">Email Security Analyzer</div>
+    </nav>
+
+    <main class="container">
+
+        <p class="tagline">YOUR EMAIL SECURITY PARTNER</p>
+
+        <h1>Stay Safe From Email Threats</h1>
+
+        <p class="description">
+            Analyze suspicious emails and identify potential
+            phishing attempts before they become a threat.
+            Protect your digital communication with MailShield.
+        </p>
+
+        <section class="analyzer-card">
+
+            <h2>Analyze Your Email</h2>
+
+            <p class="helper-text">
+                Paste the email content below to check
+                for suspicious characteristics.
+            </p>
+
+           
+<form action="/analyze" method="POST">
+
+    <label for="sender_email">Sender Email Address</label>
+
+    <input
+        type="email"
+        id="sender_email"
+        name="sender_email"
+        placeholder="example@domain.com"
+        required>
+
+    <label for="email_content">Email Content</label>
+
+    <textarea
+        id="email_content"
+        name="email_content"
+        placeholder="Paste your email content here..."
+        required></textarea>
+
+    <button class="analyze-btn" type="submit">
+        Analyze Email
+    </button>
+
+</form>
+
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        MailShield © 2026 | Email Security Analyzer
+    </footer>
+
+</body>
+</html>

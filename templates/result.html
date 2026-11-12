@@ -1,0 +1,129 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>MailShield | Security Report</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="logo">MailShield</div>
+        <div class="nav-text">Security Analysis Report</div>
+    </nav>
+
+    <main class="container">
+
+        <p class="tagline">EMAIL SECURITY ANALYSIS</p>
+
+        <h1>Analysis Complete</h1>
+
+        <p class="description">
+            Here is the security analysis of your submitted email.
+        </p>
+
+        <section class="analyzer-card result-card">
+
+            <h2>Security Assessment</h2>
+
+            <p class="helper-text">
+                Sender Email: {{ sender_email }}
+            </p>
+
+            <!-- Risk Assessment -->
+            <div class="risk-box">
+
+                <p class="helper-text">Detected Risk Level</p>
+
+                <h2 class="risk-level {{ result.risk_level|lower|replace(' ', '-') }}">
+                    {{ result.risk_level }}
+                </h2>
+
+                <p class="score">
+                    Risk Score: {{ result.risk_score }}
+                </p>
+
+                <p class="risk-explanation">
+                    {{ result.explanation }}
+                </p>
+
+            </div>
+
+            <!-- Recommended Action -->
+            <div class="recommendations">
+
+                <h2>Recommended Action</h2>
+
+                {% if result.risk_level == "High Risk" %}
+
+                    <p>
+                        Do not click links or download attachments from this email.
+                        Verify the message through the organisation's official
+                        website or contact details.
+                    </p>
+
+                {% elif result.risk_level == "Medium Risk" %}
+
+                    <p>
+                        Be cautious with this email. Verify the sender independently
+                        before clicking links or sharing personal information.
+                    </p>
+
+                {% else %}
+
+                    <p>
+                        No suspicious indicators were detected by the current checks.
+                        Continue to be careful with unexpected links and attachments.
+                    </p>
+
+                {% endif %}
+
+            </div>
+
+            <!-- Detection Findings -->
+            <div class="findings">
+
+                <h2>Detection Findings</h2>
+
+                {% if result.findings %}
+
+                    <ul>
+                        {% for finding in result.findings %}
+                            <li>{{ finding }}</li>
+                        {% endfor %}
+                    </ul>
+
+                {% else %}
+
+                    <p>No suspicious indicators detected.</p>
+
+                {% endif %}
+
+            </div>
+
+            <a href="/" class="back-btn">
+                Analyze Another Email
+            </a>
+
+            <p class="disclaimer">
+                MailShield provides preliminary automated analysis.
+                Always verify suspicious emails independently.
+            </p>
+
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        MailShield © 2026 | Email Security Analyzer
+    </footer>
+
+</body>
+</html>
