@@ -1,49 +1,26 @@
 # 🛡️ MailShield – Email Security Analyzer
 
-<p align="center">
-  A Python Flask-based web application for identifying suspicious email indicators and assessing potential phishing risks.
-</p>
+MailShield is a Python Flask-based web application designed to analyze email content and identify suspicious indicators commonly associated with phishing attacks. The application examines sender information, email content, and URLs using rule-based detection techniques. It calculates a risk score, classifies potential threats, and provides security recommendations to help users recognize suspicious emails.
 
-<p align="center">
-  ![Python](https://img.shields.io/badge/Python-3.x-blue?logo=python)
-  ![Flask](https://img.shields.io/badge/Flask-Web%20Framework-black?logo=flask)
-  ![HTML](https://img.shields.io/badge/HTML-Frontend-orange?logo=html5)
-  ![CSS](https://img.shields.io/badge/CSS-Styling-blue?logo=css3)
-  ![Security](https://img.shields.io/badge/Domain-Cybersecurity-green)
-</p>
+## 🌟 Feature List
 
----
+- **Suspicious Phrase Detection:** Identifies suspicious words and phrases commonly used in phishing emails.
+- **URL Detection and Analysis:** Detects URLs present in email content.
+- **Shortened URL Identification:** Identifies shortened URLs that may hide their actual destinations.
+- **IP-Based URL Detection:** Detects URLs that use IP addresses instead of domain names.
+- **Sender Domain Analysis:** Examines sender email domains for suspicious characteristics.
+- **Punycode Domain Detection:** Identifies internationalized domains that may be used for domain impersonation.
+- **Risk Score Calculation:** Calculates a risk score based on detected indicators.
+- **Risk Level Classification:** Categorizes emails into Low, Medium, and High risk levels.
+- **Security Recommendations:** Provides recommended actions based on the analysis.
+- **Detailed Detection Findings:** Displays the suspicious indicators identified during email analysis.
 
-## 📌 Project Overview
+## 🛠️ Technology Stack
 
-**MailShield** is a beginner-friendly email security analysis application developed using Python and Flask.
-
-It examines email content and sender information using rule-based detection techniques to identify suspicious indicators commonly associated with phishing attacks.
-
-The application calculates a risk score, classifies the email into a risk category, and provides security recommendations to help users understand potential threats.
-
-## ✨ Features
-
-- 🔍 Suspicious phrase detection
-- 🔗 URL detection and analysis
-- ⚠️ Shortened URL identification
-- 🌐 IP-based URL detection
-- 📧 Sender domain analysis
-- 🔤 Punycode domain detection
-- 📊 Risk score calculation
-- 🚦 Risk level classification
-- 🛡️ Recommended security actions
-- 📋 Detailed detection findings
-
-## 🛠️ Technologies Used
-
-| Technology | Purpose |
-|---|---|
-| Python | Application logic |
-| Flask | Backend web framework |
-| HTML | Web page structure |
-| CSS | User interface styling |
-| Regular Expressions | Pattern-based detection |
+- **Frontend:** HTML, CSS
+- **Backend:** Python, Flask
+- **Detection Technique:** Regular Expressions and Rule-Based Analysis
+- **Development Environment:** Visual Studio Code
 
 ## 📂 Project Structure
 
@@ -68,11 +45,11 @@ MailShield/
 ## ⚙️ How It Works
 
 1. The user enters the sender's email address.
-2. The user pastes the email content.
-3. MailShield examines the submitted information.
-4. The detection engine searches for suspicious indicators.
+2. The user pastes the email content into the application.
+3. MailShield analyzes the submitted information.
+4. The detection engine checks for suspicious phrases, URLs, and sender domain indicators.
 5. A risk score is calculated based on the detected indicators.
-6. The application displays the risk category, findings, and recommended security actions.
+6. The application displays the risk level, detailed findings, and recommended security actions.
 
 ## 🚦 Risk Classification
 
@@ -82,72 +59,68 @@ MailShield/
 | 🟡 Medium Risk | 2 to 3 |
 | 🔴 High Risk | 4 or above |
 
-## 📸 Screenshots
+## 🚀 How to Run
 
-*Add screenshots of your actual running application below.*
+**1. Download the project**
 
-### 🏠 Home Page
+- Open the GitHub repository.
+- Click the green **Code** button.
+- Select **Download ZIP**.
+- Extract the downloaded ZIP file.
 
-![MailShield Home Page](screenshots/home.png)
+**2. Open the project folder**
 
-### 📊 Email Analysis Result
+- Open the extracted `MailShield` folder in Visual Studio Code.
+- Open the VS Code terminal.
 
-![MailShield Analysis Result](screenshots/result.png)
-
-## 🚀 Installation and Setup
-
-### 1. Clone the repository
-
-```bash
-git clone https://github.com/Rachana9440/MailShield.git
-```
-
-### 2. Open the project folder
-
-```bash
-cd MailShield
-```
-
-### 3. Create a virtual environment (recommended)
+**3. Create a virtual environment**
 
 ```bash
 python -m venv venv
 ```
 
-### 4. Activate the virtual environment on Windows
+**4. Activate the virtual environment (Windows)**
 
 ```powershell
 .\venv\Scripts\Activate.ps1
 ```
 
-### 5. Install dependencies
+**5. Install the required dependencies**
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### 6. Run the application
+**6. Run the application**
 
 ```bash
 python app.py
 ```
 
-### 7. Open in your browser
+**7. Open the application**
 
-Visit:
+Open your browser and visit:
 
 http://127.0.0.1:5000/
 
+## 📸 Screenshots
+
+### 🏠 Home Page
+
+![MailShield Home Page](screenshots/image.png)
+
+### 📊 Email Analysis Result
+
+![MailShield Analysis Result](screenshots/result.png)
+
 ## 🎯 Project Objective
 
-The objective of MailShield is to demonstrate how basic cybersecurity concepts and rule-based detection techniques can be applied to identify suspicious email characteristics through a simple web application.
+The objective of MailShield is to demonstrate how basic cybersecurity concepts and rule-based detection techniques can be used to identify suspicious email characteristics through a simple web application.
 
 ## ⚠️ Disclaimer
 
-MailShield is an educational security analysis prototype. Its rule-based detection techniques cannot guarantee that an email is safe or malicious. The results are intended to provide preliminary security indicators, not a definitive verdict. Always verify suspicious messages independently.
+MailShield is an educational security analysis prototype. Its rule-based detection techniques cannot guarantee that an email is safe or malicious. The results provide preliminary security indicators and should not be treated as a definitive verdict. Always verify suspicious messages independently.
 
 ---
 
-<p align="center">
-  <b>Developed as a Cybersecurity Learning Project</b>
-</p>
+**Developed as a Cybersecurity Learning Project.**
