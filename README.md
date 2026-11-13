@@ -107,11 +107,11 @@ http://127.0.0.1:5000/
 
 ### 🏠 Home Page
 
-![MailShield Home Page](screenshots/image.png)
+![MailShield Home Page](Screenshots/image.png)
 
 ### 📊 Email Analysis Result
 
-![MailShield Analysis Result](screenshots/result.png)
+![MailShield Analysis Result](Screenshots/result.png)
 
 ## 🎯 Project Objective
 
