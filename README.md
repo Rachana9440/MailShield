@@ -103,14 +103,13 @@ Open your browser and visit:
 
 http://127.0.0.1:5000/
 
+
 ## 📸 Screenshots
 
 ### 🏠 Home Page
-
 ![MailShield Home Page](Screenshots/image.png)
 
 ### 📊 Email Analysis Result
-
 ![MailShield Analysis Result](Screenshots/result.png)
 
 ## 🎯 Project Objective
